@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="lib/shadowbox-3.0.3/shadowbox.css">
+    <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,700,500' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <!-- Add your site or application content here -->
+            <header class='row'>
+                <h1>
+                    <a href="#" title="Voltar ao início"> #AndaSP </a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="#" title="#">Início</a></li>
+                        <li><a href="#" title="#">Groove</a></li>
+                        <li><a href="#" title="#">Social</a></li>
+                        <li><a href="#" title="#">Quem fez?</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container-mapa-geral" class='row'>
+                <div id="semaforo" class='vermelho'></div>
+                <div class='moldura topo'></div>
+                <div class=' moldura base'></div>
+                <div class=' moldura esquerda'></div>
+                <div class=' moldura direita'></div>
+                    <div id="informacoes-gerais">
+                        <div id="transito-agora">
+                            <h2>Trânsito Agora</h2>
+                            <p class="informacao">
+                                Acima da Média
+                            </p>
+                        </div>
+                        <div id="congestionamento-total">
+                            <h2 class='informacao'>0</h2>
+                            <p>
+                             km de congestionamento
+                         </p>
+                         <div id="ultima-atualizacao">
+                            <p>Última Atualização às <span class='informacao'>09:35</span></p>
+                        </div>
+                    </div>
+                    <div id="congestionamento-dia">
+                        <div id="maxima">
+                            <h2>Máxima</h2>
+                            <p class="informacao">234</p>
+                            <span>KM</span>
+                        </div>
+                        <div id="media">
+                            <h2>Média</h2>
+                            <p class="informacao">234</p>
+                            <span>KM</span>
+                        </div>
+                        <div id="minima">
+                            <h2>Mínima</h2>
+                            <p class="informacao">234</p>
+                            <span>KM</span>
+                        </div>
+                    </div>
+            </div>
+            <div id="container-map"></div>
+            <div id="semaforo" class='medio'></div>
+        </div>
+
+        <div id="ultimas-ocorrencias" class='row'>
+            <h1>Últimas Ocorrências</h1>
+            <ul></ul>
+
+        </div>
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="lib/shadowbox-3.0.3/shadowbox.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript">
+
+        updateHome();
+        setInterval(updateHome, 60*5*1000);
+        ultimasOcorrencias($("#ultimas-ocorrencias ul"));
+
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+    </body>
+    </html>

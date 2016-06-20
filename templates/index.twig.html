@@ -1,0 +1,68 @@
+{% extends "master_page.twig.html" %}
+
+{% block title %}Geral{%endblock%}
+{% block stylesheets %} 
+{{parent()}}
+<link rel="stylesheet" href="css/jcarousel.css">
+{% endblock %}
+
+{% block content %}
+
+	<div id="container-mapa-geral" class='row'>
+		<div id="semaforo" class='vermelho'></div>
+		<div class='moldura topo'></div>
+		<div class=' moldura base'></div>
+		<div class=' moldura esquerda'></div>
+		<div class=' moldura direita'></div>
+		<div id="informacoes-gerais">
+			<div id="transito-agora">
+				<h2>Trânsito Agora</h2>
+				<p class="informacao">
+					Acima da Média
+				</p>
+			</div>
+			<div id="congestionamento-total">
+				<h2 class='informacao'>0</h2>
+				<p>
+					km de congestionamento
+				</p>
+				<div id="ultima-atualizacao">
+					<p>Última Atualização às <span class='informacao'>09:35</span></p>
+				</div>
+			</div>
+			<div id="congestionamento-dia">
+				<div id="maxima">
+					<h2>Máxima</h2>
+					<p class="informacao">234</p>
+					<span>KM</span>
+				</div>
+				<div id="media">
+					<h2>Média</h2>
+					<p class="informacao">234</p>
+					<span>KM</span>
+				</div>
+				<div id="minima">
+					<h2>Mínima</h2>
+					<p class="informacao">234</p>
+					<span>KM</span>
+				</div>
+			</div>
+		</div>
+		<div id="container-map"></div>
+		<div id="semaforo" class='medio'></div>
+	</div>
+
+<div id="mapa-social" class='row jcarousel-skin-tango'>
+		<h1>Social</h1>
+		<ul></ul>
+
+	</div>
+	{%endblock%}
+
+	{% block script %}
+	{{ parent() }}
+	<script src="js/vendor/jquery.jcarousel.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	updateHome();
+	</script>
+	{% endblock %}
